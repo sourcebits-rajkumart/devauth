@@ -1,0 +1,13 @@
+<h1> Welcome ! </h1>
+<% if user_signed_in? %>
+<%= link_to "View profile", view_profile_path(current_user.id) %>
+<%= link_to "Edit profile", edit_profile_path(current_user.id) %>
+<%= link_to "My stories", my_stories_path(current_user.id) %>
+<%= link_to "Create a story", new_story_path %>
+<%= link_to "All stories", stories_path %>
+<% end %>
+<%= link_to "sign out",destroy_user_session_path,:method => :delete%>
+
+<%= link_to "Ajax story", :remote=>true, :action=>"index" ,:controller=>"stories"%>
+
+<textarea id="stories" cols=20 rows=10></textarea>

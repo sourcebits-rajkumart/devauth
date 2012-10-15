@@ -1,0 +1,7 @@
+<% if @user!=current_user %>
+	<% flash.now[:alert] = "Login first" %>
+	<%= link_to "log in" , sign_in_path %>
+ <%else%>
+	Proceed!
+<%= render "edit_profile" %>
+ <% end %>

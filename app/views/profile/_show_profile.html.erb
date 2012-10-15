@@ -1,0 +1,8 @@
+<% if @user.profile.nil? 
+	flash.now[:alert]="Please fill in your details using edit profile option" %>
+<% else %>
+
+<b>First name  </b><%= @user.profile.first_name%></br>
+<b>Last name  </b><%= @user.profile.last_name %></br>
+<b>Sex  </b><%= @user.profile.sex %></br>
+<% end %>

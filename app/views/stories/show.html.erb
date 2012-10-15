@@ -1,0 +1,5 @@
+<%= @story.name %>
+<% if @story.user_id != current_user.id %>
+<%= link_to "Submit sections", story_sections_path(@story) %>
+<% end %>
+<%= link_to "View sections", story_sections_path(@story) %>
